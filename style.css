@@ -70,15 +70,12 @@
     height: 100vh;
     object-fit: cover;
     overflow-x: hidden;
+    background-color: rgba(rgba(12, 3, 3, 0.253), green, blue, alpha) ;
 
   }
-   
-  .section {
-    
-  }
-  .aside {
-    
-  }
+.span 
+
+
   /*inicia el footer*/
   footer {
     background-color: black;
