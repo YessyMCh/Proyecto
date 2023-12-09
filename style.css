@@ -1,172 +1,243 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  html {
-    overflow-x: hidden;
-  }
+html {
+  overflow-x: hidden;
+}
+
+.main_presentacion {
+  width: 100%;
+  height: 800px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(img.jpg/casaprincipal.jpg);
+  background-position: top -375px right 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+ 
+}
+/*texto luxury*/
+.main_presentacion .main_contenedor_text span {
+color:#848787;
+display: flex;
+width: 490px;
+height: 47px;
+flex-direction: column;
+justify-content: end;
+flex-shrink: 0;
+/* fuente cambiarfont-family: PF Regular Display Pro;*/
+font-size: 25px;
+font-weight: 400;
+}
+/*texto real estate*/
+.main_presentacion .main_contenedor_text h1 {
+  color: #fff;
+  display: flex;
+  width: 746px;
+  height: 99px;
+  flex-direction: column;
+  justify-content: end;
+  flex-shrink: 0;
+  font-size: 50px;
+  font-weight: 500;
+}
+.main_presentacion .main_button {
+  width: fit-content;
+}
+.main_presentacion .main_button button {
+  background-color: transparent;
+  height: 100%;
+  width: 300px;
+  border: white solid 1px;
+  border-radius: 20px;
+  border-color: white solid 2px;
+  color: white;
   
-  main {
-    width: 100vw;
-  }
-  /*inicia el header logo grande*/
-  header nav {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    border-bottom: solid 1px white;
-    align-items: center;
-    color: white;
-    background-color: #0005;
-    padding: 15px;
-  }
+}
+.main_presentacion .main_button_img {
+
+
+}
+.main_presentacion .main_buscador {
+  width: fit-content;
+}
+.main_presentacion .main_buscador input {
+ background-color: transparent;
+ height: 100%;
+ width: 300px;
+ border: white solid 1px;
+ border-radius: 20px;
+ border-color: white solid 2px;
+ color: white;
+ padding: 8px 16px;
+}
+.main_presentacion .main_buscador img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
   
-  header nav a img {
-    width: 122px;
+}
+/*corregir color de placeholder
+  .main_buscador input ::placeholder{
+    color:blue;
   }
-  /*logo pequeño*/
-  #mobile {
-    height: 25px;
-    width: 25px;
+*/
+header nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: solid 1px white;
+  align-items: center;
+  color: white;
+  background-color: #0005;
+  padding: 16px 60px;
+}
+
+header nav a img {
+  width: 160px;
+}
+
+#mobile {
+  height: 50px;
+  width: 50px;
+  display: none;
+
+}
+
+.nav-links {
+  display: flex;
+  gap: 64px;
+  margin-right: 30px;
+}
+
+.login,
+.menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.menu img {
+  width: 30px;
+}
+
+.bar {
+  width: 1px;
+  background-color: white;
+  height: 16px;
+}
+
+.large {
+  height: 32px;
+}
+
+.active {
+  color: rgb(198, 198, 198);
+}
+
+footer {
+  font-weight: bolder;
+  border: solid 1px black;
+  background-color: transparent;
+  padding: 10px 50px;
+  
+  background-color: black;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+
+.news {
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  gap: 16px;
+  padding: 16px 50px;
+  transform: translate(0, -50%);
+}
+
+.news span {
+  color: orange;
+  font-size: 20px;
+}
+
+.news p {
+  color: white;
+  font-size: 32px;
+}
+
+.footer-form {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-form input {
+  background-color: transparent;
+  border: solid 2px grey;
+  border-radius: 20px;
+  padding: 6px 16px;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-form button {
+  background-color: transparent;
+  border: solid 2px orange;
+  border-radius: 20px;
+  padding: 6px 32px;
+  width: fit-content;
+  color: orange;
+  justify-self: end;
+  bottom: 0;
+}
+
+.info {
+  display: grid;
+  gap: 16px;
+  color: white;
+}
+
+.footer-bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
     display: none;
   }
-  /*botones de nav*/
-  .nav-links {
-    display: flex;
-    gap: 30px;
-    margin-right: 30px;
+  #mobile {
+    display: block;
   }
-  
-  .login,
-  .menu {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+
+  .login {
+    display: none;
   }
-  
-  .menu img {
-    width: 30px;
+
+  .menu a,
+  .menu div {
+    display: none;
   }
-  /*barra pequeña nav*/
-  .bar {
-    width: 1.5px;
-    background-color: white;
-    height: 16px;
-  }
-  /*barra grande del nav*/
-  .large {
-    height: 32px;
-  }
-  
-  .active {
-    color: rgb(198, 198, 198);
-  }
-  
+
   main img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    overflow-x: hidden;
-    background-color: rgba(rgba(12, 3, 3, 0.253), green, blue, alpha) ;
-
+    object-position: center;
   }
-.span 
-
-
-  /*inicia el footer*/
-  footer {
-    background-color: black;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .news {
-    background-color: rgb(39, 39, 39);
-    display: flex;
-    gap: 16px;
-    padding: 16px 50px;
-    transform: translate(0, -50%);
-  }
-  
-  .news span {
-    color: orange;
-    font-size: 20px;
-  }
-  
-  .news p {
-    color: white;
-    font-size: 32px;
-  }
-  
-  .footer-form {
-    display: grid;
-    gap: 8px;
-  }
-  
-  .footer-form input {
-    background-color: transparent;
-    border: solid 2px grey;
-    border-radius: 20px;
-    padding: 6px 16px;
-    width: 100%;
-  }
-  
-  .footer-form button {
-    background-color: transparent;
-    border: solid 2px orange;
-    border-radius: 20px;
-    padding: 6px 32px;
-    width: fit-content;
-    color: orange;
-    justify-self: end;
-  }
-  
-  .info {
-    display: grid;
-    gap: 16px;
-    color: white;
-  }
-  
-  .footer-bar {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-  }
-  
-  .copyright {
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  
-  .footer-text {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  @media screen and (max-width: 600px) {
-    #logo {
-      display: none;
-    }
-    #mobile {
-      display: block;
-    }
-  
-    .login {
-      display: none;
-    }
-  
-    .menu a,
-    .menu div {
-      display: none;
-    }
-  
-    main img {
-      object-position: center;
-    }
-  }
-  
+}
